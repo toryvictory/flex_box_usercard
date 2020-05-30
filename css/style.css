@@ -1,1 +1,145 @@
 @import "reset.css";
+
+body {
+    background-color: #b9dee6;
+}
+
+.user-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-card {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fefefe;
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 2rem;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+}
+
+.profile-picture-container {
+    width: 140px;
+    min-height: 140px;
+
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 50%;
+
+    background-color: #efefef;
+
+    position: relative;
+}
+
+.profile-picture-container > img {
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.flag-container {
+    --flag-container-size: 30px;
+    width: var(--flag-container-size);
+    height: var(--flag-container-size);
+
+    position: absolute;
+    bottom: 6%;
+    right: 6%;
+
+    border-radius: 50%;
+    border: 1px solid #efefef;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag {
+    --flag-size:20px;
+
+    height: var(--flag-size);
+    width: var(--flag-size);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.flag-upper-section, .flag-lower-section {
+    width: var(--flag-size);
+    height: calc(var(--flag-size)/2);
+}
+
+.flag-upper-section {
+    background-color: #3399ef;
+}
+
+.flag-lower-section {
+    background-color: #f8c045;
+}
+
+.user-text-info-container {
+    max-height: 18rem;
+}
+
+.user-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 2rem 0;
+    text-transform: capitalize;
+}
+
+.user-full-name {
+    font-size: 1.8rem;
+    color: red;
+    padding-bottom: 0.5rem;
+}
+
+.user-title {
+    font-size: 1.4rem;
+}
+
+.overflow-ellipsis {
+    max-width: 260px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.user-description {
+    max-height: 9rem;
+    margin-bottom: 1rem;
+
+    text-align: center;
+    line-height: 1.5em;
+
+    overflow:auto;
+}
+
+.contact-icons-container {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: auto;
+
+    color: red;
+}
+
+.contact-icons-container > svg {
+    width: 24px;
+    height: 24px;
+    viewBox: 0 0 24px 24px;
+}
+
+.contact-icons-container > svg > path {
+    fill: currentColor;
+}
